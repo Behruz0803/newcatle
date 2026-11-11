@@ -1,5 +1,7 @@
 # Telegram Relay
 
+Server nusxasi Vercel’ning `telegram-relay-cloud` loyihasi uchun tayyorlangan.
+
 Boshqaruv botiga yozilgan **matnni shaxsiy Telegram akkauntingiz nomidan** oldindan belgilangan boshqa botlarga yuboradigan kichik dastur.
 
 ## Muhim
