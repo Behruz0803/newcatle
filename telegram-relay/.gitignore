@@ -1,0 +1,6 @@
+.env
+.data/
+.venv/
+.server-session.txt
+__pycache__/
+*.py[cod]
