@@ -162,7 +162,7 @@ async def health() -> dict[str, Any]:
         configured = Settings.from_env().configured
     except (TypeError, ValueError):
         configured = False
-    return {"ok": True, "service": "telegram-relay", "configured": configured}
+    return {"ok": True, "service": "telegram-relay", "version": 1, "configured": configured}
 
 
 @app.post("/api")
