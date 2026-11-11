@@ -77,3 +77,13 @@ SUPABASE_SECRET_KEY=SERVER_SIDE_SECRET_KEY
 ```
 
 `SUPABASE_SECRET_KEY` ni frontend kodiga yoki Git'ga qo'ymang. `.env.example` faqat namuna. Birinchi `/api/db` so'rovida `data/demo-data.json` Supabase ga avtomatik ko‘chadi; keyingi o'zgarishlar Postgres'da doimiy saqlanadi.
+
+## GitHub Pages + Supabase Edge Function
+
+Vercel ochilmaydigan tarmoqlar uchun mustaqil variant ham mavjud. `public/config.js` GitHub Pages'da API manzilini Supabase Edge Function'ga yo'naltiradi, lokal/Vercel rejimda `/api/db` saqlanadi.
+
+```bash
+npm run build:pages
+```
+
+Buyruq repository root'dagi `docs/` papkasini yaratadi. GitHub Pages source sifatida joriy branch va `/docs` tanlanadi. `404.html` SPA marshrutlari uchun nusxa, `.nojekyll` esa assetlarni o'zgartirmasdan uzatish uchun qo'shiladi. Edge Function slug: `newcastle-api`; uning `/db` va `/health` manzillari CORS orqali statik saytga xizmat qiladi.
