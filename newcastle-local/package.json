@@ -1,0 +1,17 @@
+{
+  "name": "newcastle-school-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Newcastle School o'quv markazini boshqarish tizimi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check server.js && node --check api/db.js && node --check api/health.js && node --check lib/supabase-store.js && node --check public/assets/index-DKwGrC2V.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

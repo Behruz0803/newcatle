@@ -1,0 +1,10 @@
+node_modules/
+.vercel/
+.env
+.env.local
+.env.*.local
+data/db.json
+data/*.tmp
+data/*.json.tmp
+*.log
+.DS_Store
