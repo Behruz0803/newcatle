@@ -35,6 +35,7 @@ class ServerTests(unittest.TestCase):
 
     @patch("api.index.process_update", new_callable=AsyncMock)
     def test_valid_webhook_is_processed(self, process):
+        process.return_value = {"ok": True, "sent": 2, "failed": []}
         with patch.dict(os.environ, ENV, clear=True):
             response = TestClient(app).post(
                 "/api/relay",
